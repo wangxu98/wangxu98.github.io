@@ -4,7 +4,7 @@
   <title><![CDATA[On the way]]></title>
   <link href="http://wangxu98.github.io/atom.xml" rel="self"/>
   <link href="http://wangxu98.github.io/"/>
-  <updated>2014-07-19T17:53:02+08:00</updated>
+  <updated>2014-07-19T22:31:30+08:00</updated>
   <id>http://wangxu98.github.io/</id>
   <author>
     <name><![CDATA[Ricky]]></name>
@@ -40,14 +40,14 @@
 
 <p>RVM(Ruby Version Manager)是管理Ruby的Tool, 所以首先安装RVM:</p>
 
-<pre><code>curl -L https://get.rvm.io | bash -s stable --ruby
+<pre><code>$ curl -L https://get.rvm.io | bash -s stable --ruby
 </code></pre>
 
 <p>Octopress需要的Ruby最低版本是1.9.3，所以运行以下命令:</p>
 
-<pre><code>rvm install 1.9.3
-rvm use 1.9.3
-rvm rubygems latest
+<pre><code>$ rvm install 1.9.3
+$ rvm use 1.9.3
+$ rvm rubygems latest
 </code></pre>
 
 <p><em>Tips:如果期间遇到“apt-get 404”的错误该怎么办?</em>
@@ -61,24 +61,135 @@ rvm rubygems latest
 
 <p>利用Git将octopress仓库clone到本机上：</p>
 
-<pre><code>git clone git://github.com/imathis/octopress.git octopress
-cd octopress
-ruby --version # the version at least is 1.9.3
+<pre><code>$ git clone git://github.com/imathis/octopress.git octopress
+$ cd octopress
+$ ruby --version # the version at least is 1.9.3
 </code></pre>
 
 <p>接着安装相关依赖项：</p>
 
-<pre><code>gem install bundler
-rbenv rehash    # If you use rbenv, rehash to be able to run the bundle command
-bundle install
+<pre><code>$ gem install bundler
+$ rbenv rehash    # If you use rbenv, rehash to be able to run the bundle command
+$ bundle install
 </code></pre>
 
 <p><em>Tips:如果gem install bundler执行很慢，请将根目录下面的Gemfile的源换成<a href="http://ruby.taobao.org">淘宝镜像</a></em></p>
 
 <p>安装octopress默认主题</p>
 
-<pre><code>rake install
+<pre><code>$ rake install
 </code></pre>
+
+<ul>
+<li><strong>配置octopress</strong></li>
+</ul>
+
+
+<p>通常情况下只需要配置_config.yml和Rakefile。</p>
+
+<p>Rakefile是跟博客的部署有关，一般情况下不需要改动。</p>
+
+<p>_config.yml主要包括三个部分：Main Configs, Jekyll &amp; Plugins, 3rd Party Settings.</p>
+
+<p>Main Configs主要配置url, title, subtitle等等， Jekyll &amp; Plugins主要包括自带的插件等，3rd Party Settings主要包括第三方插件，以后的扩展主要在这个部分。</p>
+
+<p>更多内容，可以参考<a href="http://octopress.org/docs/configuring/">octopress介绍</a></p>
+
+<ul>
+<li><strong>博客部署</strong></li>
+</ul>
+
+
+<p>首先需要去<a href="https://github.com/">Github官网</a>申请一个账号，然后建立一个username.github.com的仓库。通常博客的源码会放到source分支下面，生成的内容会放到master分支下。</p>
+
+<p>首先配置github page, 期间会要求提示输入url, 这个url是仓库的地址。配置完了以后会生成_deploy目录，保存生成到master分支的内容。</p>
+
+<pre><code>$ rake setup_github_pages
+</code></pre>
+
+<p>完成配置以后，就可以真正部署博客到Github上了。</p>
+
+<pre><code>$ rake generate
+$ rake deploy
+</code></pre>
+
+<p>上面的命令是git相关命令的wrapper, 主要生成博客文件并拷贝到_deploy目录里，然后commit和push到远端仓库的master分支。</p>
+
+<p>现在可以通过<a href="http://username.github.com%E8%AE%BF%E9%97%AE%E4%BD%A0%E7%9A%84%E5%8D%9A%E5%AE%A2%E4%BA%86%EF%BC%81">http://username.github.com%E8%AE%BF%E9%97%AE%E4%BD%A0%E7%9A%84%E5%8D%9A%E5%AE%A2%E4%BA%86%EF%BC%81</a></p>
+
+<p>不过还有一件事情没做，就是把博客源代码管理起来，push到远端仓库的source分支上。</p>
+
+<pre><code>$ git add .
+$ git commit -m "Initial source commit"
+$ git push origin source
+</code></pre>
+
+<p>更多内容，可以参考<a href="http://octopress.org/docs/deploying/">官方介绍</a></p>
+
+<ul>
+<li><strong>markdown格式的博文</strong></li>
+</ul>
+
+
+<p>生成一个新的博文：</p>
+
+<pre><code>$ rake new_post["title"]
+</code></pre>
+
+<p>title最好是英文，因为该命令会在source/_post/目录下生一个名为YYYY-MM-DD-title.markdown的文件，这个文件名中的title不支持中文。该文件会自动生成以下内容:</p>
+
+<pre><code>---
+layout: post
+title: "title"
+date: 2014-7-19 17:22:59 +0800
+comments: true
+---
+</code></pre>
+
+<p>可以将title的英文改成中文。</p>
+
+<p>你可以在生成内容以后添加你的博客内容，必须遵守极简的markdown语法，有个入门的教程来自<a href="http://www.ituring.com.cn/article/23">图灵社区</a>，我觉得非常适合初学者。阳志平老师的介绍<a href="http://www.yangzhiping.com/tech/r-markdown-knitr.html">markdown写作</a>的文章也非常好，当然还有<a href="http://wowubuntu.com/markdown/">官方文档</a>。</p>
+
+<p><em>Tips:利用sublime来编辑markdown文件，用markdown preview插件来预览</em></p>
+
+<p>接下来可以进行部署了：</p>
+
+<pre><code>$ rake generate
+$ git add .
+$ git commit -m "Publish a new article"
+$ git push origin source
+$ rake deploy
+</code></pre>
+
+<p>更多内容，参考<a href="http://octopress.org/docs/blogging/">官方介绍</a></p>
+
+<ul>
+<li><strong>参考资料</strong></li>
+</ul>
+
+
+<p><a href="http://beyondvincent.com/blog/2013/08/03/108-creating-a-github-blog-using-octopress/">http://beyondvincent.com/blog/2013/08/03/108-creating-a-github-blog-using-octopress/</a></p>
+
+<p><a href="http://blog.devtang.com/blog/2012/02/10/setup-blog-based-on-github/">http://blog.devtang.com/blog/2012/02/10/setup-blog-based-on-github/</a></p>
+
+<p><a href="http://www.ituring.com.cn/article/23">http://www.ituring.com.cn/article/23</a></p>
+
+<p><strong>Q</strong>: 如何更换默认主题？</p>
+
+<p><strong>A</strong>: 首先从3rd Party Themes里选择一款你喜欢的主题或者去Google一款，然后执行以下命令：</p>
+
+<pre><code>$ cd octopress
+$ git clone GIT_URL .themes/THEME_NAME
+$ rake install['THEME_NAME']
+$ rake generate
+$ rake deploy
+</code></pre>
+
+<p>然后去<a href="http://username.github.com%E5%8E%BB%E7%9C%8B%E4%B8%80%E4%B8%8B%E4%BD%A0%E7%9A%84%E6%96%B0%E4%B8%BB%E9%A2%98%E5%90%A7%E3%80%82">http://username.github.com%E5%8E%BB%E7%9C%8B%E4%B8%80%E4%B8%8B%E4%BD%A0%E7%9A%84%E6%96%B0%E4%B8%BB%E9%A2%98%E5%90%A7%E3%80%82</a></p>
+
+<p><strong>Q</strong>: 如何为我的octopress配置更多的功能？</p>
+
+<p><strong>A</strong>: 这个问题留着下一篇文章再写吧，因为我也和你们一样在探索成长。</p>
 ]]></content>
   </entry>
   
