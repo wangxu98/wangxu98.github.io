@@ -49,6 +49,8 @@ Octopress需要的Ruby最低版本是1.9.3，所以运行以下命令:
 
 *Tips:如果gem install bundler执行很慢，请将根目录下面的Gemfile的源换成[淘宝镜像](http://ruby.taobao.org)*
 
+<!--more-->
+
 安装octopress默认主题
 
     $ rake install
