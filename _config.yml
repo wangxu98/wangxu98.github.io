@@ -99,3 +99,14 @@ google_analytics_tracking_id:
 
 # Facebook Like
 facebook_like: false
+
+# Add duoshuo comments
+duoshuo_comments: true
+duoshuo_short_name: wangxu98
+#以下参数均为可选参数
+data-num-items: 10      #显示最新评论的条数
+data-show-avatars: 1    #是否显示头像，1：显示，0：不显示
+data-show-time: 1       #是否显示时间，1：显示，0：不显示
+data-show-title: 0      #是否显示标题，1：显示，0：不显示
+data-show-admin: 1      #是否显示管理员的评论，1：显示，0：不显示
+data-excerpt-length: 70 #最大显示评论汉字数
