@@ -1,42 +1,33 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
 
-  <title><![CDATA[My Octopress Blog]]></title>
+  <title><![CDATA[On the way]]></title>
   <link href="http://wangxu98.github.io/atom.xml" rel="self"/>
   <link href="http://wangxu98.github.io/"/>
-  <updated>2014-07-19T15:54:10+08:00</updated>
+  <updated>2014-07-19T17:29:19+08:00</updated>
   <id>http://wangxu98.github.io/</id>
   <author>
-    <name><![CDATA[Your Name]]></name>
+    <name><![CDATA[Ricky]]></name>
     
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
   
   <entry>
-    <title type="html"><![CDATA[How To Build A Github Blog]]></title>
+    <title type="html"><![CDATA[如何拥有一个Github博客？]]></title>
     <link href="http://wangxu98.github.io/blog/2014/07/19/how-to-build-a-github-blog/"/>
-    <updated>2014-07-19T00:00:00+08:00</updated>
+    <updated>2014-07-19T17:22:59+08:00</updated>
     <id>http://wangxu98.github.io/blog/2014/07/19/how-to-build-a-github-blog</id>
-    <content type="html"><![CDATA[<h2>如何拥有一个Github博客？</h2>
+    <content type="html"><![CDATA[<p><strong>Q</strong>: 为什么在Github上搭建博客？
+<strong>A</strong>: Github page可以很好的展现静态网页页面，而且通过Git来管理博客文件似乎是一件比较酷的事情。<a href="http://octopress.org/">octopress</a>是一个利用<a href="https://github.com/jekyll/jekyll">Jelly</a>开发的一个博客系统，将octopress部署到Github上可以很好的搭建一个个人博客。</p>
 
-<p><strong>Q</strong>: 为什么在Github上搭建博客？</p>
-
-<p><strong>A</strong>: Github page可以很好的展现静态网页页面，而且通过Git来管理博客文件似乎是一件比较酷的事情。<a href="http://octopress.org/">octopress</a>是一个利用<a href="https://github.com/jekyll/jekyll">Jelly</a>开发的一个博客系统，将octopress部署到Github上可以很好的搭建一个个人博客。</p>
-
-<p><strong>Q</strong>: 在Github上搭建博客有哪些具体步骤？</p>
-
-<p><strong>A</strong>: 依据我在Ubuntu12.04版本上的经验，详细步骤如下</p>
+<p><strong>Q</strong>: 在Github上搭建博客有哪些具体步骤？
+<strong>A</strong>: 依据我在Ubuntu12.04版本上的经验，详细步骤如下:</p>
 
 <ul>
-<li><strong>安装Git</strong></li>
-</ul>
-
-
-<p>现在ubuntu发行版都自带Git,如果还需了解请点击<a href="http://git-scm.com/">这里</a></p>
-
-<ul>
-<li><strong>安装Ruby</strong></li>
+<li><p><strong>安装Git</strong>
+现在ubuntu发行版都自带Git,如果还需了解请点击<a href="http://git-scm.com/">这里</a></p></li>
+<li><p><strong>安装Ruby</strong></p></li>
 </ul>
 
 
@@ -45,25 +36,16 @@
 <pre><code>curl -L https://get.rvm.io | bash -s stable --ruby
 </code></pre>
 
-<p>Octopress需要的Ruby最低版本是1.9.3，所以运行以下命令：</p>
+<p>Octopress需要的Ruby最低版本是1.9.3，所以运行以下命令:</p>
 
 <pre><code>rvm install 1.9.3
 rvm use 1.9.3
 rvm rubygems latest
 </code></pre>
 
-<p><em>Tips:如果期间遇到“apt-get 404”的错误该怎么办?</em></p>
-
-<p><em>A: 首先运行</em></p>
-
-<pre><code>rvm autolibs read-fail
-</code></pre>
-
-<p><em>根据提示安装缺失的库文件，然后运行以下命令就可以了</em></p>
-
-<pre><code>rvm autolibs enable
-rvm install 1.9.3
-</code></pre>
+<p><em>Tips:如果期间遇到“apt-get 404”的错误该怎么办?</em>
+<em>A: 首先运行rvm autolibs read-fail</em>
+<em>根据提示安装缺失的库文件，然后运行以下命令就可以了rvm autolibs enable</em></p>
 ]]></content>
   </entry>
   
