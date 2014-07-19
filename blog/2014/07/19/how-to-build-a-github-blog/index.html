@@ -131,8 +131,34 @@ rvm rubygems latest
 </code></pre>
 
 <p><em>Tips:如果期间遇到“apt-get 404”的错误该怎么办?</em>
-<em>A: 首先运行rvm autolibs read-fail</em>
-<em>根据提示安装缺失的库文件，然后运行以下命令就可以了rvm autolibs enable</em></p>
+<em>A: 首先运行    rvm autolibs read-fail</em>
+<em>根据提示安装缺失的库文件，然后运行以下命令就可以了  rvm autolibs enable</em></p>
+
+<ul>
+<li><strong>安装octopress</strong></li>
+</ul>
+
+
+<p>利用Git将octopress仓库clone到本机上：</p>
+
+<pre><code>git clone git://github.com/imathis/octopress.git octopress
+cd octopress
+ruby --version # the version at least is 1.9.3
+</code></pre>
+
+<p>接着安装相关依赖项：</p>
+
+<pre><code>gem install bundler
+rbenv rehash    # If you use rbenv, rehash to be able to run the bundle command
+bundle install
+</code></pre>
+
+<p><em>Tips:如果gem install bundler执行很慢，请将根目录下面的Gemfile的源换成<a href="http://ruby.taobao.org">淘宝镜像</a></em></p>
+
+<p>安装octopress默认主题</p>
+
+<pre><code>rake install
+</code></pre>
 </div>
 
 
