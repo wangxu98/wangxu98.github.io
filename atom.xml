@@ -4,7 +4,7 @@
   <title><![CDATA[On the way]]></title>
   <link href="http://wangxu98.github.io/atom.xml" rel="self"/>
   <link href="http://wangxu98.github.io/"/>
-  <updated>2014-07-19T22:31:30+08:00</updated>
+  <updated>2014-07-19T22:34:05+08:00</updated>
   <id>http://wangxu98.github.io/</id>
   <author>
     <name><![CDATA[Ricky]]></name>
@@ -115,7 +115,7 @@ $ rake deploy
 
 <p>上面的命令是git相关命令的wrapper, 主要生成博客文件并拷贝到_deploy目录里，然后commit和push到远端仓库的master分支。</p>
 
-<p>现在可以通过<a href="http://username.github.com%E8%AE%BF%E9%97%AE%E4%BD%A0%E7%9A%84%E5%8D%9A%E5%AE%A2%E4%BA%86%EF%BC%81">http://username.github.com%E8%AE%BF%E9%97%AE%E4%BD%A0%E7%9A%84%E5%8D%9A%E5%AE%A2%E4%BA%86%EF%BC%81</a></p>
+<p>现在可以通过&#8221;<a href="http://username.github.com">http://username.github.com</a>&#8220;访问你的博客了！</p>
 
 <p>不过还有一件事情没做，就是把博客源代码管理起来，push到远端仓库的source分支上。</p>
 
@@ -185,7 +185,7 @@ $ rake generate
 $ rake deploy
 </code></pre>
 
-<p>然后去<a href="http://username.github.com%E5%8E%BB%E7%9C%8B%E4%B8%80%E4%B8%8B%E4%BD%A0%E7%9A%84%E6%96%B0%E4%B8%BB%E9%A2%98%E5%90%A7%E3%80%82">http://username.github.com%E5%8E%BB%E7%9C%8B%E4%B8%80%E4%B8%8B%E4%BD%A0%E7%9A%84%E6%96%B0%E4%B8%BB%E9%A2%98%E5%90%A7%E3%80%82</a></p>
+<p>然后去&#8221;<a href="http://username.github.com">http://username.github.com</a>&#8220;去看一下你的新主题吧。</p>
 
 <p><strong>Q</strong>: 如何为我的octopress配置更多的功能？</p>
 
