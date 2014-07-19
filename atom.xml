@@ -4,7 +4,7 @@
   <title><![CDATA[On the way]]></title>
   <link href="http://wangxu98.github.io/atom.xml" rel="self"/>
   <link href="http://wangxu98.github.io/"/>
-  <updated>2014-07-19T17:29:19+08:00</updated>
+  <updated>2014-07-19T17:33:43+08:00</updated>
   <id>http://wangxu98.github.io/</id>
   <author>
     <name><![CDATA[Ricky]]></name>
@@ -18,16 +18,23 @@
     <link href="http://wangxu98.github.io/blog/2014/07/19/how-to-build-a-github-blog/"/>
     <updated>2014-07-19T17:22:59+08:00</updated>
     <id>http://wangxu98.github.io/blog/2014/07/19/how-to-build-a-github-blog</id>
-    <content type="html"><![CDATA[<p><strong>Q</strong>: 为什么在Github上搭建博客？
-<strong>A</strong>: Github page可以很好的展现静态网页页面，而且通过Git来管理博客文件似乎是一件比较酷的事情。<a href="http://octopress.org/">octopress</a>是一个利用<a href="https://github.com/jekyll/jekyll">Jelly</a>开发的一个博客系统，将octopress部署到Github上可以很好的搭建一个个人博客。</p>
+    <content type="html"><![CDATA[<p><strong>Q</strong>: 为什么在Github上搭建博客？</p>
 
-<p><strong>Q</strong>: 在Github上搭建博客有哪些具体步骤？
-<strong>A</strong>: 依据我在Ubuntu12.04版本上的经验，详细步骤如下:</p>
+<p><strong>A</strong>: Github page可以很好的展现静态网页页面，而且通过Git来管理博客文件似乎是一件比较酷的事情。<a href="http://octopress.org/">octopress</a>是一个利用<a href="https://github.com/jekyll/jekyll">Jelly</a>开发的一个博客系统，将octopress部署到Github上可以很好的搭建一个个人博客。</p>
+
+<p><strong>Q</strong>: 在Github上搭建博客有哪些具体步骤？</p>
+
+<p><strong>A</strong>: 依据我在Ubuntu12.04版本上的经验，详细步骤如下:</p>
 
 <ul>
-<li><p><strong>安装Git</strong>
-现在ubuntu发行版都自带Git,如果还需了解请点击<a href="http://git-scm.com/">这里</a></p></li>
-<li><p><strong>安装Ruby</strong></p></li>
+<li><strong>安装Git</strong></li>
+</ul>
+
+
+<p>现在ubuntu发行版都自带Git,如果还需了解请点击<a href="http://git-scm.com/">这里</a></p>
+
+<ul>
+<li><strong>安装Ruby</strong></li>
 </ul>
 
 
