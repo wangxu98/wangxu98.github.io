@@ -115,58 +115,9 @@ $(document).ready(
 
 <p><strong>A</strong>: 依据我在Ubuntu12.04版本上的经验，详细步骤如下:</p>
 
-<ul>
-<li><strong>安装Git</strong></li>
-</ul>
-
-
-<p>现在ubuntu发行版都自带Git,如果还需了解请点击<a href="http://git-scm.com/">这里</a></p>
-
-<ul>
-<li><strong>安装Ruby</strong></li>
-</ul>
-
-
-<p>RVM(Ruby Version Manager)是管理Ruby的Tool, 所以首先安装RVM:</p>
-
-<pre><code>$ curl -L https://get.rvm.io | bash -s stable --ruby
-</code></pre>
-
-<p>Octopress需要的Ruby最低版本是1.9.3，所以运行以下命令:</p>
-
-<pre><code>$ rvm install 1.9.3
-$ rvm use 1.9.3
-$ rvm rubygems latest
-</code></pre>
-
-<p><em>Tips:如果期间遇到“apt-get 404”的错误该怎么办?</em>
-<em>A: 首先运行    rvm autolibs read-fail</em>
-<em>根据提示安装缺失的库文件，然后运行以下命令就可以了  rvm autolibs enable</em></p>
-
-<ul>
-<li><strong>安装octopress</strong></li>
-</ul>
-
-
-<p>利用Git将octopress仓库clone到本机上：</p>
-
-<pre><code>$ git clone git://github.com/imathis/octopress.git octopress
-$ cd octopress
-$ ruby --version # the version at least is 1.9.3
-</code></pre>
-
-<p>接着安装相关依赖项：</p>
-
-<pre><code>$ gem install bundler
-$ rbenv rehash    # If you use rbenv, rehash to be able to run the bundle command
-$ bundle install
-</code></pre>
-
-<p><em>Tips:如果gem install bundler执行很慢，请将根目录下面的Gemfile的源换成<a href="http://ruby.taobao.org">淘宝镜像</a></em></p>
-
 
 		
-		<a href="/blog/2014/07/19/how-to-build-a-github-blog/" class="more-link">Read on &rarr;</a>
+		<a href="/blog/2014/07/19/how-to-build-a-github-blog/" class="more-link">继续阅读 &rarr;</a>
 	</div>
 
 

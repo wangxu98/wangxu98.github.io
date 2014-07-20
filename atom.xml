@@ -4,7 +4,7 @@
   <title><![CDATA[On the way]]></title>
   <link href="http://wangxu98.github.io/atom.xml" rel="self"/>
   <link href="http://wangxu98.github.io/"/>
-  <updated>2014-07-19T23:25:52+08:00</updated>
+  <updated>2014-07-20T09:25:53+08:00</updated>
   <id>http://wangxu98.github.io/</id>
   <author>
     <name><![CDATA[Ricky]]></name>
@@ -25,6 +25,9 @@
 <p><strong>Q</strong>: 在Github上搭建博客有哪些具体步骤？</p>
 
 <p><strong>A</strong>: 依据我在Ubuntu12.04版本上的经验，详细步骤如下:</p>
+
+<!--more-->
+
 
 <ul>
 <li><strong>安装Git</strong></li>
@@ -74,9 +77,6 @@ $ bundle install
 </code></pre>
 
 <p><em>Tips:如果gem install bundler执行很慢，请将根目录下面的Gemfile的源换成<a href="http://ruby.taobao.org">淘宝镜像</a></em></p>
-
-<!--more-->
-
 
 <p>安装octopress默认主题</p>
 
