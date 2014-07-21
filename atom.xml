@@ -4,7 +4,7 @@
   <title><![CDATA[On the way]]></title>
   <link href="http://wangxu98.github.io/atom.xml" rel="self"/>
   <link href="http://wangxu98.github.io/"/>
-  <updated>2014-07-21T09:26:27+08:00</updated>
+  <updated>2014-07-21T09:48:06+08:00</updated>
   <id>http://wangxu98.github.io/</id>
   <author>
     <name><![CDATA[Ricky]]></name>
@@ -176,6 +176,16 @@ $ rake deploy
 <p><a href="http://blog.devtang.com/blog/2012/02/10/setup-blog-based-on-github/">http://blog.devtang.com/blog/2012/02/10/setup-blog-based-on-github/</a></p>
 
 <p><a href="http://www.ituring.com.cn/article/23">http://www.ituring.com.cn/article/23</a></p>
+
+<p><strong>Q</strong>: rake preview如果显示TCPServer error怎么办？</p>
+
+<p><strong>A</strong>: 共有两种方法，分别如下：</p>
+
+<pre><code>$ lsof -wni tcp:4000    # 找到占用4000端口的进程
+$ kill -9 pid           # kill掉占用4000端口的进程
+</code></pre>
+
+<p>如果这种方法不好使，则用下一种：将根目录下Rakefile里面的server_port修改成3000</p>
 
 <p><strong>Q</strong>: 如何更换默认主题？</p>
 
