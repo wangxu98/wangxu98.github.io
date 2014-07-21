@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
 
-  <title><![CDATA[On the way]]></title>
-  <link href="http://wangxu98.github.io/atom.xml" rel="self"/>
+  <title><![CDATA[Category: octopress | On the way]]></title>
+  <link href="http://wangxu98.github.io/blog/categories/octopress/atom.xml" rel="self"/>
   <link href="http://wangxu98.github.io/"/>
   <updated>2014-07-21T15:18:08+08:00</updated>
   <id>http://wangxu98.github.io/</id>
@@ -118,7 +118,7 @@ $ rake deploy
 
 <p>上面的命令是git相关命令的wrapper, 主要生成博客文件并拷贝到_deploy目录里，然后commit和push到远端仓库的master分支。</p>
 
-<p>现在可以通过&#8221;<a href="http://username.github.com">http://username.github.com</a>&#8220;访问你的博客了！</p>
+<p>现在可以通过"<a href="http://username.github.com">http://username.github.com</a>"访问你的博客了！</p>
 
 <p>不过还有一件事情没做，就是把博客源代码管理起来，push到远端仓库的source分支上。</p>
 
@@ -198,7 +198,7 @@ $ rake generate
 $ rake deploy
 </code></pre>
 
-<p>然后去&#8221;<a href="http://username.github.com">http://username.github.com</a>&#8220;去看一下你的新主题吧。</p>
+<p>然后去"<a href="http://username.github.com">http://username.github.com</a>"去看一下你的新主题吧。</p>
 
 <p><strong>Q</strong>: 如何为我的octopress配置更多的功能？</p>
 
